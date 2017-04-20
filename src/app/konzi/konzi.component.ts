@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Question } from "app/question/question";
 import { KonziLines } from "app/konzi/konziLines";
 
+declare let ga: Function;
+
 @Component({
   selector: 'app-konzi',
   templateUrl: './konzi.component.html',
@@ -32,11 +34,14 @@ export class KonziComponent implements OnInit {
       return;
     }
 
+    ga('send', 'event', 'Konzultál', 'Indít');
+
     let workArray: string[] = [];
     let fillArray: string[] = [];
     let lineLengths: number[] = [];
     let startOfLines: number[] = [];
     let startOfLimeSumHelp: number = 0;
+    let cantMake: boolean = false;
 
     this.originalLines.forEach(line => {
       if(this.leaveCasing)
@@ -120,6 +125,7 @@ export class KonziComponent implements OnInit {
       }
       if(index >= workArray.length){
         alert("Bocsi Uram, de ez így nincs benne :'(\nAzért megmutatom, amit lehet.");
+        cantMake = true;
         break;
       }
       indexes.push(index);
@@ -150,6 +156,8 @@ export class KonziComponent implements OnInit {
     }
 
     this.sliceUp(this.lines);
+
+    ga('send', 'event', 'Konzultál', cantMake ? 'Részlet' : 'Teljes');
   }
 
 

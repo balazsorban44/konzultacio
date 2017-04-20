@@ -1,0 +1,10 @@
+.question{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.bottom-bordered{
+    border-bottom-style: dashed;
+    border-bottom-width: thin;
+    padding-bottom: 10px;
+}

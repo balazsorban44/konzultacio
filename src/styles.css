@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.7px;
+    counter-reset: line-count;
+}
+
+del{
+    background-color: black;
+    color: black;
+}
+
+p>del, .grey-del del{
+    background-color: grey;
+}
+
+ol{
+    padding-left: 17px;
+}
+
+@media (min-width: 768px) {
+    .pull-right-sm {
+        float: right;
+    }
+    .border-right-sm{
+        border-right-style: dashed;
+        border-right-width: thin;
+    }
+}
+@media (max-width: 767px) {
+    .pull-right-sm {
+        float: left;
+    }
+}
+
+.no-side-margin {
+    margin-right:0;
+    margin-left:0;
+}
+
+.no-side-padding {
+    padding-right:0;
+    padding-left:0;
+}
+
+.line-to-count::before{
+    counter-increment: line-count;
+    content: counter(line-count);
+    vertical-align: super;
+    font-size: xx-small;
+}

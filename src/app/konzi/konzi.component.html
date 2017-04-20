@@ -1,0 +1,44 @@
+<div class="row no-side-margin">
+    <div class="konzi-input-fields col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 col-sm-12">
+        <div class="row">
+            <md-input-container style="width:100%">
+                <input name="message" mdInput placeholder="Mit üzennél?" [(ngModel)]="myText">
+            </md-input-container>
+        </div>
+        <div class="col-xs-12">
+            <md-checkbox [(ngModel)]="leaveCasing">Kis- és nagybetűkre figyelj</md-checkbox>
+            <md-checkbox [(ngModel)]="delToGray">Csak szürkíts</md-checkbox>
+            <md-checkbox [(ngModel)]="showLineNumbers">Sorok számozása</md-checkbox>
+        </div>
+        <div class="col-xs-12">
+            <button md-raised-button color="primary" (click)="csapjad()">
+                HAZAÁRULOK
+            </button>
+            <button md-raised-button color="primary" (click)="reset()">
+                CSAK KOMOLYAN
+            </button>
+        </div>
+    </div>
+</div>
+<div class="row no-side-margin" [class.grey-del]="delToGray">
+    <div class="col-sm-6 col-xs-12 border-right-sm">
+        <div class="pull-right-sm">
+            <app-question startNumber=1 [question]="q1" [showLineNumbers]="showLineNumbers">
+            </app-question>
+            <app-question startNumber=2 [question]="q2" [showLineNumbers]="showLineNumbers">
+            </app-question>
+            <app-question startNumber=3 [question]="q3" [showLineNumbers]="showLineNumbers">
+            </app-question>
+        </div>
+    </div>
+    <div class="col-sm-6 col-xs-12">
+        <div class="pull-left">
+            <app-question startNumber=4 [question]="q4" [showLineNumbers]="showLineNumbers">
+            </app-question>
+            <app-question startNumber=5 [question]="q5" [showLineNumbers]="showLineNumbers">
+            </app-question>
+            <app-question startNumber=6 [question]="q6" [showLineNumbers]="showLineNumbers">
+            </app-question>
+        </div>
+    </div>
+</div>

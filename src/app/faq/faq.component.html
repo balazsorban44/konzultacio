@@ -1,0 +1,71 @@
+<div class="col-md-8 col-md-offset-2 col-sm-12">
+    <h3>Ez mégis mi?</h3>
+    <p>
+        Az úgy volt, hogy egyrészt eléggé felhúztam magamat a "Nemzeti" "konzultáción". Már gyakorlatilag 
+        a <a href="http://index.hu/gazdasag/2017/04/13/2017_nemzeti_konzultacios_kerdoiv_brusszel/">kérdések is hazudnak </a>, innentől csak hab a tortán, hogy a válszok nagyon jó példák a 
+        <a href="http://a.te.ervelesi.hibad.hu/hamis-dilemma">hamis dilemmára</a>.
+    </p>
+    <p>
+        Nem sokkal azután, hogy kézhez kaptam ezt a remekművet, a neten láttam egy képet arról, hogy valaki próbálta valahogy elmondani a saját véleményét, amit a
+        nem kívánt részek kisatírozásával sikerült elérni. Dicséretes, ugyanakkor fáradtságos munka ez, de szerencsére informatikailag lehet ehhez támogatást nyújtani.
+    </p>
+    <p>
+        Ezen a honlapon beírhatod a személyes üzenetedet, majd a hazaárulás gombra kattintva megmutatja, hogy milyen satírozási mintával hozható ez ki a konzultációs lapodról.
+    </p>
+
+    <h3>Oké, de miért ilyen fapados és gyányolt?</h3>
+    <p>
+        A munka, család és a tüntetések (meg a sorozatok) mellett erre futotta...
+    </p>
+
+    <h3>Hogyan működik?</h3>
+    <p>
+        A "Mit üzennél?" helyére beírod az üzenetedet, majd megnyomod a "Hazaárulok" gombot, erre a roppant kifinomult algoritmus megpróbálja megkeresni azt a konzultáció szövegében,
+        és megmutatja neked, hogy hogyan kell satírozni.
+    </p>
+    <p>
+        Maga az algoritmus azért annyira nem kifinomult: szépen sorban halad az általad beírt üzeneten és a szövegen, és ha megtalálta következő egyezést, akkor azt használja. Ennek előnye, hogy ha
+        kihozható az üzeneted, akkor (elvileg) meg is találja. Hátránya, hogy eléggé darabos lesz. Ezen egy kicsit segít, hogy ha talált egyezést, akkor megnézi az előző karaktereket, hátha pont 
+        azokat kérted te is. Tehát ha mondjuk azt akarod megkeresni, hogy "lépés", akkor az eredmény nem "<del>Brüssze</del>l<del> vesz</del>é<del>lyes lé</del>pés<del>re</del>" lesz, hanem
+        "<del>Brüsszel veszé </del>lépés<del>re</del>" lesz.
+    </p>
+    <h4>Advanszd keresés</h4>
+    <p>
+        Ha látod, hogy egy szóra a szöveg későbbi pontján lenne jobb találat, akkor meg tudod mondani, hogy ugorjunk adott sor adott betűjéhez. Ennek formátuma "_sor_" vagy "_sor;betű_".<br>
+        Például ha azt írod, hogy "a kutya _5_fáját _10;6_már", akkor elkezdi keresni a szöveget az elejéről, majd a "fáját" előtt az 5. sorra ugrik, a "már" előtt pedig a 10. sor 6. karakteréhez.
+        Természetesen csak előrefelé ugrunk. Ehhez nyújt segítséget a "Sorok számozása" opció.
+    </p>
+    <h4>Opciók</h4>
+    <b>Kis- és nagybetűkre figyelj</b>
+    <p>
+        Alapértelmezetten nem különbözteti meg a kis- és nagybetűket, de ha te ehhez ragaszkodsz, van rá lehetőség.
+    </p>
+    <b>Csak szürkíts</b>
+    <p>
+        Ilyenkor nem feketíti ki teljesen a kitakart szöveget, így könnyebb azt átvinni papírra.
+    </p>
+    <b>Sorok számozása</b>
+    <p>
+        A sorok elején megjelenik, hogy hányadik is az a sor. A már említett advanszd módhoz nyújt segítséget.
+    </p>
+
+    <h3>Nem működik</h3>
+    <p>
+        Simán benne van, hogy valamit elrontottam.
+    </p>
+    <p>
+        Az egész oldal Angular segítségével készült (nem a JS, az újabbik, itt most épp a 4.0.x verzió), te meg valamilyen régebbi böngészőt használsz. Ez esetben már lehet, hogy idáig sem jutottál el,
+        de ha mégis, akkor <a href="https://angular.io/docs/ts/latest/guide/browser-support.html">itt</a> meg tudod nézni, hogy milyen verziók támogatottak.
+    </p>
+
+    <h3>Ha befűzöm a nyomtatóba a konzultációs lapot, rá tudom nyomtatni az eredményt?</h3>
+    <p>Természetesen, viszont 1-&epsilon; valószínűséggel* nem fog illeszkedni, így nem javaslom.</p>
+    <p style="font-size:smaller">* szinte biztosan</p>
+
+    <h3>"Figyelmeztetések" a végére</h3>
+    <p>Az oldal soha nem fog kérni tőled olyat, hogy tölts le valamit, szóval ha mégis megkérdezné, akkor ne engedd. Nem is akar elnavigálni téged sehová, csak egy index.hu, egy angular.io és egy 
+        "a te érvelési hibád" link van a leírásban. Az oldalon fut a Google Analytics, de az oroszokhoz (tudtommal) nincs bekötve.</p>
+
+    <h3>Pocsék a helyesírásod</h3>
+    <p>Tudom, ez van. Pedig tök sokat olvasok, szóval aki azzal jön, hogy talán el kellene olvasni pár könyvet, az tehet egy szívességet.</p>
+</div>

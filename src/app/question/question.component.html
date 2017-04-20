@@ -1,0 +1,15 @@
+
+<ol [start]="startNumber" [class.bottom-bordered]="startNumber%3 != 0" class="main-container">
+  <li style="font-weight:bold">
+    <div [class.line-to-count]="showLineNumbers" *ngFor="let line of question.omg" [innerHTML]="line"></div>
+    <div class="question" [class.line-to-count]="showLineNumbers" *ngFor="let line of question.noWhat" [innerHTML]="line"></div>
+  </li>
+  <ol type="a">
+      <li>
+          <div [class.line-to-count]="showLineNumbers" *ngFor="let line of question.black" [innerHTML]="line"></div>
+      </li>
+      <li>
+          <div [class.line-to-count]="showLineNumbers" *ngFor="let line of question.white" [innerHTML]="line"></div>
+      </li>
+  </ol>
+</ol>
